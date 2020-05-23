@@ -1,0 +1,6 @@
+.popup__content_type_image {
+  height: 100%;
+  max-width: 80vw;
+  max-height: 80vh;
+  position: relative;
+}
