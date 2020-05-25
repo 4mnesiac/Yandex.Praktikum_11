@@ -2,7 +2,7 @@
   "name": "yandex.praktikum_11",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "index.js",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "core-js": "^3.4.1",
@@ -45,5 +45,5 @@
   "bugs": {
     "url": "https://github.com/4mnesiac/Yandex.Praktikum_11/issues"
   },
-  "homepage": "https://4mnesiac.github.io/Yandex.Praktikum_11"
+  "homepage": "https://4mnesiac.github.io/Yandex.Praktikum_11/"
 }
