@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Mesto</title>
-    <link rel="stylesheet" href="./pages/index.css" />
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css%>" />
   </head>
   <body>
     <div class="root">
       <header class="header root__section">
-        <img src="./images/logo.svg" alt="mesto logo" class="logo" />
+        <img src="<%=require('./images/logo.svg').default%>" alt="mesto logo" class="logo" />
       </header>
       <div class="profile root__section">
         <div class="user-info">
@@ -25,31 +25,31 @@
       </div>
       <div class="places-list root__section">
         <!-- Пример вёрстки карточки: -->
-        <!-- 
-        <div class="place-card">
-          <div
-            class="place-card__image"
-            style="
-              background-image: url(https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg);
-            "
-            data-url="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg"
-          >
-            <button class="place-card__delete-icon"></button>
-          </div>
-          <div class="place-card__description">
-            <h3 class="place-card__name">Камчатка</h3>
-            <div class="place-card__like-container">
-              <button class="place-card__like-icon"></button>
-              <span class="place-card__like-counter">0</span>
-            </div>
-          </div>
-        </div> -->
+
+<!--        <div class="place-card">-->
+<!--          <div-->
+<!--            class="place-card__image"-->
+<!--            style="-->
+<!--              background-image: url(https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg);-->
+<!--            "-->
+<!--            data-url="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg"-->
+<!--          >-->
+<!--            <button class="place-card__delete-icon"></button>-->
+<!--          </div>-->
+<!--          <div class="place-card__description">-->
+<!--            <h3 class="place-card__name">Камчатка</h3>-->
+<!--            <div class="place-card__like-container">-->
+<!--              <button class="place-card__like-icon"></button>-->
+<!--              <span class="place-card__like-counter">0</span>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
 
         <!-- конец примера. -->
       </div>
       <div class="popup popup_add-card">
         <div class="popup__content">
-          <img src="./images/close.svg" alt="" class="popup__close" />
+          <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close" />
           <h3 class="popup__title">Новое место</h3>
           <form class="popup__form popup__form_add-card" name="new" novalidate>
             <input
@@ -80,7 +80,7 @@
       </div>
       <div class="popup popup_edit">
         <div class="popup__content">
-          <img src="./images/close.svg" alt="" class="popup__close" />
+          <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close" />
           <h3 class="popup__title">Редактирование профиля</h3>
           <form class="popup__form popup__form_edit" name="edit" novalidate>
             <input
@@ -112,16 +112,10 @@
       <div class="popup popup_type_image">
         <div class="popup__content_type_image">
           <img src="" alt="" class="popup__image" />
-          <img src="./images/close.svg" alt="" class="popup__close" />
+          <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close" />
         </div>
       </div>
     </div>
-    <script src="js/Card.js"></script>
-    <script src="js/Api.js"></script>
-    <script src="js/CardList.js"></script>
-    <script src="js/UserInfo.js"></script>
-    <script src="js/Popup.js"></script>
-    <script src="js/FormValidator.js"></script>
-    <script src="main.js"></script>
-  </body>
+    <script type="module" src="<%=htmlWebpackPlugin.files.js%>"></script>
+    </body>
 </html>

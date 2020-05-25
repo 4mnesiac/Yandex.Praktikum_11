@@ -1,4 +1,6 @@
-class UserInfo {
+import {userAvatar, pageJob, pageName} from "./index.js";
+
+export class UserInfo {
   constructor(pageName, pageJob, api) {
     this.pageName = pageName;
     this.pageJob = pageJob;
