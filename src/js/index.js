@@ -5,8 +5,9 @@ import {Popup} from "./Popup.js";
 import {UserInfo} from "./UserInfo.js";
 import {Api} from "./Api.js";
 import "../style.css";
+
 const isDev = process.env.NODE_ENV === 'development';
-console.log(process.env.NODE_ENV === 'development');
+
 const placesList = document.querySelector(".places-list");
 const addUserCardButton = document.querySelector(".user-info__button");
 const editPopup = document.querySelector(".popup_edit");
@@ -33,7 +34,10 @@ const addCardFormValidator = new FormValidator(
   errorMessages
 );
 const config = {
-  baseUrl: (isDev ? "http://praktikum.tk/" : "https://praktikum.tk/"),
+  baseUrl: (
+
+      isDev ? "http://praktikum.tk/" : "https://praktikum.tk/"
+  ),
   cohort: "cohort10",
   headers: {
     authorization: "6d33a112-40c4-409c-8bfb-6d7bc0787a0d",

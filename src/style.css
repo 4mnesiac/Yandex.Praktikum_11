@@ -1,3 +1,5 @@
+@import url('./vendor/fonts.css');
+@import url('./vendor/normalize.css');
 @import url('./blocks/root/root.css');
 @import url('./blocks/profile/profile.css');
 @import url('./blocks/popup/popup.css');

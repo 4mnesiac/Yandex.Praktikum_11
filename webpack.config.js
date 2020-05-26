@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+
 const isDev = process.env.NODE_ENV === 'development';
 
 
@@ -29,7 +30,10 @@ module.exports = {
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
-        loader: 'file-loader?name=./vendor/[name].[ext]'
+        loader: 'file-loader',
+        options: {
+          name: './vendor/fonts/[name].[ext]',
+        },
       },
       {
       test: /\.(png|jpg|gif|ico|svg)$/,
@@ -61,6 +65,7 @@ module.exports = {
       filename: 'index.html'
     }),
     new WebpackMd5Hash(),
+
     new webpack.DefinePlugin({
       'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     })
