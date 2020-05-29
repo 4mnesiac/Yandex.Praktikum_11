@@ -1,4 +1,4 @@
-class Card {
+export class Card {
   constructor(imagePreview, openPreview, api, myId) {
     this.imagePreview = imagePreview;
     this.openPreview = openPreview;

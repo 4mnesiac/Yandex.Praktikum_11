@@ -1,4 +1,6 @@
-class CardList {
+import {cardList} from "./index.js";
+
+export class CardList {
   constructor(container, api, func, myId) {
     this.container = container;
     this.func = func;

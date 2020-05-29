@@ -1,4 +1,4 @@
-class Api {
+export class Api {
   constructor(options) {
     this.options = options;
     this.url = options.baseUrl;
@@ -19,7 +19,7 @@ class Api {
         return Promise.reject(`Ошибка: ${res.status}`);
       })
       .then(function (result) {
-        console.log(result);
+        // console.log(result);
         return result;
       })
       .catch((err) => console.log(err));

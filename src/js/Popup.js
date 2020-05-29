@@ -1,4 +1,4 @@
-class Popup {
+export class Popup {
   constructor(popup) {
     this.popup = popup;
     this.closeHandler = () => this.close();

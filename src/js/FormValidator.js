@@ -1,4 +1,5 @@
-class FormValidator {
+import {pageName, pageJob} from './index.js';
+export class FormValidator {
   constructor(form, errorMessages) {
     this.form = form;
     this.errorMessages = errorMessages;
