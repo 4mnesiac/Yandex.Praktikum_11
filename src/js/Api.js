@@ -19,7 +19,7 @@ export class Api {
         return Promise.reject(`Ошибка: ${res.status}`);
       })
       .then(function (result) {
-        // console.log(result);
+        console.log(result);
         return result;
       })
       .catch((err) => console.log(err));
@@ -51,6 +51,19 @@ export class Api {
         about: about,
       }),
     }).catch((err) => console.log(err));
+  }
+
+  patchUserAvatar(avatar) {
+    fetch(`${this.url}${this.cohort}/users/me/avatar`, {
+      method: "PATCH",
+      headers: {
+        authorization: this.token,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        avatar: avatar,
+      }),
+    }).catch((err) => console.error(err));
   }
 
   getUserInfo() {

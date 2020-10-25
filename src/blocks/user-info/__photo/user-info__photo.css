@@ -13,3 +13,9 @@
     margin-top: 40px;
   }
 }
+
+.user-info__photo:hover {
+  opacity: 0.6;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
