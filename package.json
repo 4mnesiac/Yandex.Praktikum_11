@@ -1,7 +1,7 @@
 {
-  "name": "yandex.praktikum_11",
-  "version": "1.0.0",
-  "description": "Single page web application on JS with API",
+  "name": "mesto",
+  "version": "1.0.1",
+  "description": "Single page web application with Open API",
   "main": "src/js/index.js",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
@@ -34,16 +34,17 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
-    "deploy": "cross-env NODE_ENV=production gh-pages -d dist"
+    "deploy": "cross-env NODE_ENV=production gh-pages -d dist",
+    "frontend-deploy": "npm run build && scp -r ./dist/* nhance@84.201.171.86:/home/nhance/frontend"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/4mnesiac/Yandex.Praktikum_11.git"
+    "url": "git+https://github.com/4mnesiac/Mesto.git"
   },
   "author": "Artem Glazyrin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/4mnesiac/Yandex.Praktikum_11/issues"
+    "url": "https://github.com/4mnesiac/Mesto/issues"
   },
-  "homepage": "https://4mnesiac.github.io/Yandex.Praktikum_11/"
+  "homepage": "https://4mnesiac.github.io/Mesto/"
 }

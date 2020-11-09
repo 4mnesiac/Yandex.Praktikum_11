@@ -15,14 +15,14 @@ export class Card {
 
       this.api.deleteCard(data._id);
       elem.closest(".place-card");
-          // .then(() => {
+      // .then(() => {
 
-          // })
-          // // this.api.deleteCard(card.data._id)
-          // //     .then(() => {
-          // //       console.log(card.data.id)
-          // //     })
-          // .catch((err) => console.log(err))
+      // })
+      // // this.api.deleteCard(card.data._id)
+      // //     .then(() => {
+      // //       console.log(card.data.id)
+      // //     })
+      // .catch((err) => console.log(err))
 
 
     }
@@ -67,13 +67,7 @@ export class Card {
     this._setListeners.apply(this, this.template);
     this._removeListeners.bind(this);
     this.template.data = cardData;
-    // this.api.getInitialCards().then((cardData) => {
-    //   if (cardData.owner._id === this.myId) {
-    //
-    //     removeButton.classList.add('place-card__delete-icon');
-    //     removeButton.addEventListener('click', (event) => {
-    //
-    // });
+
 
     return template;
   }
@@ -92,11 +86,11 @@ export class Card {
     // if (confirm('fdfd')) {
     //           this.api.deleteCard(data._id)
     //               .then(() => {
-                    this.remove(event.target, data)
-            //       })
-            //       .catch((err) => console.log(err));
-            // }
-          }
+    this.remove(event.target, data)
+    //       })
+    //       .catch((err) => console.log(err));
+    // }
+  }
 
 
 
@@ -107,7 +101,7 @@ export class Card {
     this.template
       .querySelector(".place-card__delete-icon")
       .addEventListener("click", (event) =>
-          this._handleRemove(event, this.template.data));
+        this._handleRemove(event, this.template.data));
     this.template
       .querySelector(".place-card__image")
       .addEventListener("click", this._handlePreview);
